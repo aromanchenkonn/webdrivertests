@@ -33,7 +33,7 @@ public class TestGoogleRun extends TestConfig{
 
     @Test
     public void testGoogleRun3(){
-        String expected = "Google";
+        String expected = "Google2";
         title = driver.getTitle();
         System.out.println(title);
         Assert.assertTrue(title.equals(expected));
