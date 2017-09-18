@@ -1,0 +1,6 @@
+# ignore user files
+readme.txt
+
+# IntellijIdea files
+*.iml
+.idea

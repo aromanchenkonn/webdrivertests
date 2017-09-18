@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>RunGoogle</groupId>
+  <artifactId>google</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>google</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>LATEST</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-chrome-driver</artifactId>
+      <version>LATEST</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>LATEST</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <configuration>
+        <source>1.8</source>
+        <target>1.8</target>
+      </configuration>
+      <executions>
+        <execution>
+          <id>compile mytests</id>
+          <goals>
+            <goal>testCompile</goal>
+          </goals>
+          <phase>pre-integration-test</phase>
+          <configuration>
+            <testSource>${project.basedir}/src/test</testSource>
+          </configuration>
+        </execution>
+      </executions>
+      <version>2.3.2</version>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>2.14</version>
+      <configuration>
+        <testSourceDirectory>${project.basedir}/src/test/java/</testSourceDirectory>
+        <testClassesDirectory>${project.build.directory}/test-classes/</testClassesDirectory>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+</project>
+
+
+
+
+
