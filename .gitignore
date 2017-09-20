@@ -1,6 +1,7 @@
 # ignore user files
 readme.txt
 *.log
+*.log.lck
 # IntellijIdea files
 *.iml
 .idea
