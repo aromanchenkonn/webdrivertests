@@ -43,7 +43,7 @@ public class TestConfig{
     @Before
     public void createDriver() throws InterruptedException, IOException {
         fh = new FileHandler("./log/myLog.log");
-        //fh.setFilter(new MyFilter());
+        fh.setFilter(new MyFilter());
         fh.setFormatter(new MyFormatter());
         log.setUseParentHandlers(false);
         log.addHandler(fh);
