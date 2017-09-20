@@ -1,33 +1,23 @@
 package RunGoogle;
 
-import junit.framework.TestCase;
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-/*
-*
-* test check run google
-*
-* */
-public class TestGoogleRun extends TestConfig{
-    private String title = "";
+
+import java.io.IOException;
+
+public class TestGoogleRun extends TestConfig {
 
     @Test
-    public void testGoogleRun1(){
-        String expected = "Google";
-        title = driver.getTitle();
-        System.out.println(title);
+    public void testGoogleRun1() throws IOException {
+        String expected = "Google2";
+        String title = driver.getTitle();
         Assert.assertTrue(title.equals(expected));
     }
 
     @Test
-    public void testGoogleRun2(){
+    public void testGoogleRun2() {
         String expected = "Google";
-        title = driver.getTitle();
-        System.out.println(title);
+        String title = driver.getTitle();
         Assert.assertTrue(title.equals(expected));
     }
 }
