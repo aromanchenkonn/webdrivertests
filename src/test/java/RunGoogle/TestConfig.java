@@ -17,9 +17,9 @@ import java.util.logging.Logger;
 
 public class TestConfig{
     WebDriver driver;
-    private GetWebDriver automation;
-    private Handler fh;
-    private Logger log = Logger.getLogger(TestCase.class.getName());
+    public GetWebDriver automation;
+    protected Handler fh;
+    protected Logger log = Logger.getLogger(TestCase.class.getName());
     @Rule
     @SuppressWarnings("deprecation")
     public TestWatchman watchman = new TestWatchman() {

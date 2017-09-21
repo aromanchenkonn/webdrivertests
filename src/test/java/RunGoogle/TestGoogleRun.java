@@ -15,6 +15,8 @@ public class TestGoogleRun extends TestConfig {
     public void testGoogleRun1() throws IOException {
         String expected = "Google2";
         String title = driver.getTitle();
+        log.info("param expected: '" + expected + "';");
+        log.info("param actual: '" + title + "';");
         Assert.assertTrue(title.equals(expected));
     }
 
